@@ -32,15 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Internet, Fiber, Voice & IPTV
           </span>
         </header>
-
         <main className="min-h-[80vh]">{children}</main>
-
-        {/* Global footer */}
-        <footer className="bg-gray-700 text-gray-300 text-center py-3 hover:text-yellow-500 transition cursor-pointer">
-          <a href="https://technical-care-expert.vercel.app" target="_blank" rel="noopener noreferrer">
-            Technical Care Expert
-          </a>
-        </footer>
       </body>
     </html>
   );
