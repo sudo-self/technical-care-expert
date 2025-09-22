@@ -43,14 +43,14 @@ export default function Home() {
       });
 
       const data = await res.json();
-      const reply = data.reply || "⚠️ No response";
+      const reply = data.reply || "No response";
 
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (err) {
       console.error(err);
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "⚠️ Error connecting to agent." },
+        { role: "assistant", content: "Error connecting to agent." },
       ]);
     } finally {
       setLoading(false);
@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4 text-white">
       <div className="w-full max-w-3xl flex flex-col h-[80vh] bg-gray-800 rounded-3xl shadow-xl overflow-hidden">
-        {/* Header */}
+   
         <div className="bg-gray-900 p-4 md:p-6 flex items-center justify-between border-b border-gray-700 rounded-t-3xl">
           <div className="flex items-center space-x-3">
             <img src="/support.png" alt="Agent" className="w-10 h-10 rounded-full" />
@@ -71,7 +71,7 @@ export default function Home() {
           </span>
         </div>
 
-        {/* Messages */}
+  
         <div className="flex-1 p-4 md:p-6 overflow-y-auto space-y-4">
           {messages.map((m, i) => (
             <div
@@ -100,7 +100,7 @@ export default function Home() {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input */}
+     
         <div className="flex items-center p-4 md:p-6 border-t border-gray-700 bg-gray-800">
           <input
             type="text"
@@ -119,7 +119,7 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Clickable Footer */}
+ 
         <footer className="bg-gray-700 text-gray-300 text-center py-2 hover:text-yellow-500 transition cursor-pointer">
           <a href="https://technical-care-expert.vercel.app" target="_blank" rel="noopener noreferrer">
             Technical Care Expert
