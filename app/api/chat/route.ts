@@ -8,7 +8,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ reply: "⚠️ Missing agent_id or messages." });
     }
 
-    // Optional: prepend a system message to customize behavior
+ 
     const systemMessage = {
       role: "system",
       content: "You are a technical support expert for Internet, Fiber, Voice, and IPTV. Answer clearly, politely, and provide step-by-step instructions."
